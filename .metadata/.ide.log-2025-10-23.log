@@ -1,0 +1,57 @@
+2025-10-24 06:12:07,805 [INFO] WebApp:194 - Connection lost
+2025-10-24 06:12:17,286 [INFO] WebApp:191 - Connection restablished
+2025-10-24 15:33:52,159 [INFO] WebApp:194 - Connection lost
+2025-10-24 15:34:00,063 [INFO] WebApp:191 - Connection restablished
+2025-10-24 18:51:54,818 [INFO] WebApp:194 - Connection lost
+2025-10-24 18:52:03,339 [INFO] WebApp:191 - Connection restablished
+2025-10-24 19:31:25,609 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 562984264 Bytes (835715072)
+2025-10-24 19:31:27,649 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 597587272 Bytes (835715072)
+2025-10-24 19:31:28,098 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 640096024 Bytes (835715072)
+2025-10-24 19:31:29,095 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-10-24 19:31:29,095 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8H7
+2025-10-24 19:31:29,095 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: MEMORYMAP
+2025-10-24 19:31:29,095 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-10-24 19:31:29,096 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-10-24 19:31:29,096 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: CORTEX_M7
+2025-10-24 19:31:29,096 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-10-24 19:31:29,098 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-10-24 19:31:29,101 [INFO] CodeGenerator:892 - code generatio: config db path: E:\STM32STUFF\stmSystem\STM32CubeIDE_1.18.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2025-10-24 19:31:29,528 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\MXTmpFiles\license.tmp_save
+2025-10-24 19:31:30,144 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\MXTmpFiles\license.tmp
+2025-10-24 19:31:30,302 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\MXTmpFiles\gpio.tmp_save
+2025-10-24 19:31:30,463 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\MXTmpFiles\gpio.tmp
+2025-10-24 19:31:30,535 [WARN] IPConfigManager:103 - WARNING: Missing Config File for MEMORYMAP ip!!
+2025-10-24 19:31:30,730 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\MXTmpFiles\cortex.tmp_save
+2025-10-24 19:31:30,866 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\MXTmpFiles\cortex.tmp
+2025-10-24 19:31:30,888 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\MXTmpFiles\dma.tmp_save
+2025-10-24 19:31:30,979 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\MXTmpFiles\dma.tmp
+2025-10-24 19:31:30,985 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\MXTmpFiles\dma_GV.tmp_save
+2025-10-24 19:31:31,074 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\MXTmpFiles\dma_GV.tmp
+2025-10-24 19:31:31,097 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\Core\Src\stm32h7xx_it.c_save
+2025-10-24 19:31:31,253 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\Core\Src\stm32h7xx_it.c
+2025-10-24 19:31:31,263 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\Core\Inc\stm32h7xx_it.h_save
+2025-10-24 19:31:31,347 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\Core\Inc\stm32h7xx_it.h
+2025-10-24 19:31:31,426 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\Core\Src\stm32h7xx_hal_msp.c_save
+2025-10-24 19:31:31,583 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\Core\Src\stm32h7xx_hal_msp.c
+2025-10-24 19:31:31,589 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\MXTmpFiles\system.tmp_save
+2025-10-24 19:31:31,675 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\MXTmpFiles\system.tmp
+2025-10-24 19:31:31,713 [INFO] CodeEngine:321 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\Core\Inc\stm32h7xx_hal_conf.h_save
+2025-10-24 19:31:31,995 [INFO] CodeEngine:345 - Generated code: E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\Core\Inc\stm32h7xx_hal_conf.h
+2025-10-24 19:31:32,260 [INFO] ApiDbMcu:532 - Load IP Config File for TIM24
+2025-10-24 19:31:32,284 [INFO] ApiDbMcu:532 - Load IP Config File for RCC
+2025-10-24 19:31:32,302 [WARN] IPConfigManager:3811 - IP not found : TIM
+2025-10-24 19:31:32,316 [WARN] CodeGenerator:4259 - IP not found : null
+2025-10-24 19:31:32,362 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\Core\Inc\main.h_save
+2025-10-24 19:31:32,743 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\Core\Inc\main.h
+2025-10-24 19:31:32,761 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\Core\Src\main.c_save
+2025-10-24 19:31:33,276 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\dataAndCommsExperiments\Core\Src\main.c
+2025-10-24 19:31:34,360 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 464mS.
+2025-10-24 19:31:34,376 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2025-10-24 19:31:34,700 [INFO] ConfigFileManager:1595 - The Die is : DIE483
+2025-10-24 19:31:34,730 [INFO] ApiDbMcu:532 - Load IP Config File for FATFS
+2025-10-24 19:31:34,743 [INFO] ApiDbMcu:532 - Load IP Config File for FREERTOS
+2025-10-24 19:31:34,756 [INFO] ApiDbMcu:532 - Load IP Config File for LIBJPEG
+2025-10-24 19:31:34,776 [INFO] ApiDbMcu:532 - Load IP Config File for LWIP
+2025-10-24 19:31:34,794 [INFO] ApiDbMcu:532 - Load IP Config File for MBEDTLS
+2025-10-24 19:31:34,907 [INFO] ApiDbMcu:532 - Load IP Config File for USB_DEVICE
+2025-10-24 19:31:34,916 [INFO] ApiDbMcu:532 - Load IP Config File for USB_HOST
