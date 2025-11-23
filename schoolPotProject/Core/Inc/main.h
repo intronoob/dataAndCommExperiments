@@ -59,6 +59,10 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define xValPin_Pin GPIO_PIN_7
 #define xValPin_GPIO_Port GPIOA
+#define yValPin_Pin GPIO_PIN_5
+#define yValPin_GPIO_Port GPIOC
+#define yPwrPin_Pin GPIO_PIN_0
+#define yPwrPin_GPIO_Port GPIOB
 #define xPwrPin_Pin GPIO_PIN_12
 #define xPwrPin_GPIO_Port GPIOF
 

@@ -35,20 +35,23 @@
 /* USER CODE BEGIN PD */
 #define XVAL_CHANNEL   ADC_CHANNEL_7   // PF12 usually
 #define XPWR_CHANNEL   ADC_CHANNEL_6   // example second input
+#define YVAL_CHANNEL   ADC_CHANNEL_8   // PF12 usually
+#define YPWR_CHANNEL   ADC_CHANNEL_9   // example second input
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 
 /* USER CODE END PM */
-
+c
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
 
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-long double length = 6.1045;
+long double lengthX = 6.1045;
+long double lengthY = 2.75;
 uint32_t dataOutputPause = 1000;
 /* USER CODE END PV */
 
@@ -60,6 +63,7 @@ static void MX_ADC1_Init(void);
 static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
 uint16_t readXVal(void);
+uint16_t ReadADC(ADC_HandleTypeDef *hadc, uint32_t channel, ADC_ChannelConfTypeDef sConfig);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -307,8 +311,9 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPIOF_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOF_CLK_ENABLE();
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
@@ -330,73 +335,92 @@ int _write(int fd, char* ptr, int len) {
 }
 uint16_t readXVal(void)
 {
-	uint32_t prevTick = HAL_GetTick();
-	uint32_t cycles = 0;
+	uint32_t prevTick = 0;
+	uint32_t cycles = 1;
+	uint32_t curTick = 0;
 	long double xAvg = 0;
 	long double pXAvg = 0;
+	long double yAvg = 0;
+	long double pyAvg = 0;
+	ADC_ChannelConfTypeDef sConfig = {0};
+
+	sConfig.Rank = ADC_REGULAR_RANK_1;
+	sConfig.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
+	sConfig.SingleDiff = ADC_SINGLE_ENDED;
+	sConfig.OffsetNumber = ADC_OFFSET_NONE;
+	sConfig.Offset = 0;
+	sConfig.OffsetSignedSaturation = DISABLE;
 	while(true) {
-		uint32_t curTick = HAL_GetTick();
-//
-//		ADC_ChannelConfTypeDef sConfig = {0};
-//
-//		// ----------- Read XVAL -----------
+		curTick = HAL_GetTick();
+		long double prevValMultl;
+		if(cycles != 1) {
+			prevValMultl = (long double)cycles / (long double)(cycles-1);
+		} else {
+			prevValMultl = 0.0;
+		}
+		// ----------- Read XVAL -----------
 //		sConfig.Channel = XVAL_CHANNEL;
-//		sConfig.Rank = ADC_REGULAR_RANK_1;
-//		sConfig.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
-//		sConfig.SingleDiff = ADC_SINGLE_ENDED;
-//		sConfig.OffsetNumber = ADC_OFFSET_NONE;
-//		sConfig.Offset = 0;
-//		sConfig.OffsetSignedSaturation = DISABLE;
 //		HAL_ADC_ConfigChannel(&hadc1, &sConfig);
 //		HAL_ADC_Start(&hadc1);
 //		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
 //		uint16_t xVal = HAL_ADC_GetValue(&hadc1);
 //		HAL_ADC_Stop(&hadc1);
-//
-//		xAvg +=
-//				xAvg*(
-//					(long double)cycles /
-//					((long double)cycles-1.0)
-//				) + (long double)xVal / (long double)cycles;
-//
-//
-//		// ----------- Read XPWR -----------
+
+
+		// ----------- Read XPWR -----------
 //		sConfig.Channel = XPWR_CHANNEL;
 //		HAL_ADC_ConfigChannel(&hadc1, &sConfig);
-//
 //		HAL_ADC_Start(&hadc1);
 //		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
 //		uint16_t xPwr = HAL_ADC_GetValue(&hadc1);
 //		HAL_ADC_Stop(&hadc1);
-//
-//		pXAvg +=
-//				pXAvg*(
-//					(long double)cycles /
-//					((long double)cycles-1.0)
-//				) + (long double)xPwr / (long double)cycles;
-//
-//		// ---------- final averaged values ----------
+		uint16_t xPwr = ReadADC(&hadc1, XVAL_CHANNEL, sConfig);
+		uint16_t xVal = ReadADC(&hadc1, XPWR_CHANNEL, sConfig);
+		uint16_t yPwr = ReadADC(&hadc1, YVAL_CHANNEL, sConfig);
+		uint16_t yVal = ReadADC(&hadc1, YPWR_CHANNEL, sConfig);
 
-		if(prevTick - curTick >= dataOutputPause) {
+		xAvg = xAvg*prevValMultl + ((long double)xVal / (long double)cycles);
+		pXAvg = pXAvg*prevValMultl + ((long double)xPwr / (long double)cycles);
+		yAvg = yAvg*prevValMultl + ((long double)yVal / (long double)cycles);
+		pYAvg = pYAvg*prevValMultl + ((long double)yPwr / (long double)cycles);
+
+
+
+
+		if(curTick - prevTick >= dataOutputPause) {
 			// ---------- convert to millivolts ----------
 			long double mvXVal = (long double)xAvg * 3300.0 / 65535.0;
 			long double mvXPwr = (long double)pXAvg * 3300.0 / 65535.0;
 
 			// ---------- compute distance ----------
-			long double distanceIn = (xAvg / pXAvg) * length;
+			long double distanceXIn = (xAvg / pXAvg) * lengthX;
+			long double distanceYIn = (yAvg / pYAvg) * lengthY;
 
 			// ---------- print output ----------
-			printf("cycles=%lu | xValAvg=%Lf | xPwrAvg=%Lf | mvXVal=%Lf mV | mvXPwr=%Lf mV | dist=%Lf in\r\n",
-				   cycles, xAvg, pXAvg, mvXVal, mvXPwr, distanceIn);
+//			printf("cycles=%lu\n", cycles);
+			printf("cycles=%lu | coords:%.2Lf,%.2Lf in\n",cycles, distanceXIn,distanceYIn);
 			xAvg = 0.0;
 			pXAvg = 0.0;
-			cycles = 0;
+			cycles = 1;
 			prevTick = curTick;
 		}
 		cycles++;
 
 	}
     return 0;
+}
+
+uint16_t ReadADC(ADC_HandleTypeDef *hadc, uint32_t channel, ADC_ChannelConfTypeDef sConfig)
+{
+    sConfig.Channel = channel;
+    HAL_ADC_ConfigChannel(hadc, &sConfig);
+
+    HAL_ADC_Start(hadc);
+    HAL_ADC_PollForConversion(hadc, HAL_MAX_DELAY);
+    uint16_t val = HAL_ADC_GetValue(hadc);
+    HAL_ADC_Stop(hadc);
+
+    return val;
 }
 
 /* USER CODE END 4 */
