@@ -29,4 +29,11 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>QOL Src</name>
+			<type>2</type>
+			<location>E:/STM32STUFF/STM32 custom libraries/QOL stuff/Src</location>
+		</link>
+	</linkedResources>
 </projectDescription>

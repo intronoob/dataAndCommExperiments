@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
+#include "qol.h"
 
 /* USER CODE END Includes */
 
@@ -32,7 +33,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+//STM32H7
+#define ENCODER_ACCURACY 360 * 5 * 5 * 5
+#define AVG_AMT 200
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -42,14 +45,22 @@
 
 /* Private variables ---------------------------------------------------------*/
 
+TIM_HandleTypeDef htim23;
 TIM_HandleTypeDef htim24;
 DMA_HandleTypeDef hdma_tim24_up;
 
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-unsigned long prevCounter = 0;
-unsigned long curCounter = 0;
+uint32_t prevEncode = 0;
+uint32_t prevTime = 0;
+uint32_t curEncode = 0;
+uint32_t curTime = 0;
+int32_t encodeDif = 0;
+int32_t timeDif = 0;
+float avgSpeedSet[AVG_AMT];
+float avgSpeed = 0;
+int curAmt = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -59,6 +70,7 @@ static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_TIM24_Init(void);
 static void MX_USART1_UART_Init(void);
+static void MX_TIM23_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -76,7 +88,6 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MPU Configuration--------------------------------------------------------*/
@@ -103,7 +114,9 @@ int main(void)
   MX_DMA_Init();
   MX_TIM24_Init();
   MX_USART1_UART_Init();
+  MX_TIM23_Init();
   /* USER CODE BEGIN 2 */
+  QOL_dwtInit();
   HAL_TIM_Encoder_Start(&htim24, TIM_CHANNEL_ALL);
   /* USER CODE END 2 */
 
@@ -111,11 +124,28 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  curCounter = __HAL_TIM_GET_COUNTER(&htim24);
+//	  HAL_IncTick()
+	  curEncode = __HAL_TIM_GET_COUNTER(&htim24);
+	  curTime = DWT->CYCCNT;
+	  DWT->CYCCNT = 0;
+	  encodeDif = curEncode - prevEncode;
+	  timeDif = curTime;
+//	  avgSpeed = (float)encodeDif/((float)timeDif/1000000);
+	  avgSpeedSet[curAmt] = (float)encodeDif/((float)timeDif/1000000.0);
+	  for(int i = 0; i < AVG_AMT; i++) {
+		  avgSpeed += avgSpeedSet[i] / AVG_AMT;
+	  }
+	  printf("encoder: %.4f, time: %lu, encoder: %lu\n", avgSpeed, timeDif, encodeDif);
+//	  printf("encoder: %.4f\n", avgSpeed);
+	  avgSpeed = 0;
+	  prevEncode = curEncode;
+	  prevTime = curTime;
+	  if(curAmt < AVG_AMT) {
+		  curAmt++;
+	  } else {
+		  curAmt = 0;
+	  }
 	  HAL_Delay(100);
-	  printf("encoder: %lu\n", curCounter - prevCounter);
-	  prevCounter = curCounter;
-//	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -180,6 +210,55 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief TIM23 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM23_Init(void)
+{
+
+  /* USER CODE BEGIN TIM23_Init 0 */
+
+  /* USER CODE END TIM23_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+
+  /* USER CODE BEGIN TIM23_Init 1 */
+
+  /* USER CODE END TIM23_Init 1 */
+  htim23.Instance = TIM23;
+  htim23.Init.Prescaler = 0;
+  htim23.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim23.Init.Period = 4294967295;
+  htim23.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim23.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_PWM_Init(&htim23) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim23, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_PWM_ConfigChannel(&htim23, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM23_Init 2 */
+
+  /* USER CODE END TIM23_Init 2 */
+  HAL_TIM_MspPostInit(&htim23);
+
 }
 
 /**
