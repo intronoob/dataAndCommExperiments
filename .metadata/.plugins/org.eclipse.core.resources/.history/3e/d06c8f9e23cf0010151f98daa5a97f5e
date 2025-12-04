@@ -1,0 +1,16 @@
+/*
+ * trng.h
+ *
+ *  Created on: Dec 1, 2025
+ *      Author: artyo
+ */
+
+#ifndef TRNG_H_
+#define TRNG_H_
+
+#ifdef DEBUG
+#include "stdio.h"
+#define TRNG_DBG(...) printf(__VA_ARGS__); //my own printf!
+#endif /* debug */
+
+#endif /* TRNG_H_ */

@@ -1,0 +1,49 @@
+2025-11-29 09:15:18,777 [INFO] WebApp:194 - Connection lost
+2025-11-29 09:15:30,852 [INFO] WebApp:191 - Connection restablished
+2025-11-29 18:41:56,838 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-11-29 18:42:01,265 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 757622376 Bytes (1073741824)
+2025-11-29 18:42:02,580 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 806905448 Bytes (1073741824)
+2025-11-29 18:42:04,021 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 777860488 Bytes (1073741824)
+2025-11-29 18:42:04,730 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-11-29 18:42:04,730 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-11-29 18:42:04,730 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: MEMORYMAP
+2025-11-29 18:42:04,730 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-11-29 18:42:04,730 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-11-29 18:42:04,730 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-11-29 18:42:04,730 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: CORTEX_M7
+2025-11-29 18:42:04,731 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-11-29 18:42:04,733 [INFO] CodeGenerator:892 - code generatio: config db path: E:\STM32STUFF\stmSystem\STM32CubeIDE_1.18.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2025-11-29 18:42:05,002 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\MXTmpFiles\license.tmp_save
+2025-11-29 18:42:05,426 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\MXTmpFiles\license.tmp
+2025-11-29 18:42:05,522 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\MXTmpFiles\gpio.tmp_save
+2025-11-29 18:42:05,703 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\MXTmpFiles\gpio.tmp
+2025-11-29 18:42:05,843 [WARN] IPConfigManager:103 - WARNING: Missing Config File for MEMORYMAP ip!!
+2025-11-29 18:42:06,002 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\MXTmpFiles\cortex.tmp_save
+2025-11-29 18:42:06,100 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\MXTmpFiles\cortex.tmp
+2025-11-29 18:42:06,118 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\Core\Src\stm32h7xx_it.c_save
+2025-11-29 18:42:06,246 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\Core\Src\stm32h7xx_it.c
+2025-11-29 18:42:06,252 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\Core\Inc\stm32h7xx_it.h_save
+2025-11-29 18:42:06,334 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\Core\Inc\stm32h7xx_it.h
+2025-11-29 18:42:06,467 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\Core\Src\stm32h7xx_hal_msp.c_save
+2025-11-29 18:42:06,674 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\Core\Src\stm32h7xx_hal_msp.c
+2025-11-29 18:42:06,681 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\MXTmpFiles\system.tmp_save
+2025-11-29 18:42:06,773 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\MXTmpFiles\system.tmp
+2025-11-29 18:42:06,796 [INFO] CodeEngine:321 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\Core\Inc\stm32h7xx_hal_conf.h_save
+2025-11-29 18:42:06,915 [INFO] CodeEngine:345 - Generated code: E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\Core\Inc\stm32h7xx_hal_conf.h
+2025-11-29 18:42:06,991 [INFO] ApiDbMcu:532 - Load IP Config File for ADC1
+2025-11-29 18:42:07,015 [INFO] ApiDbMcu:532 - Load IP Config File for USART1
+2025-11-29 18:42:07,024 [INFO] ApiDbMcu:532 - Load IP Config File for RCC
+2025-11-29 18:42:07,043 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\Core\Inc\main.h_save
+2025-11-29 18:42:07,234 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\Core\Inc\main.h
+2025-11-29 18:42:07,243 [INFO] CodeEngine:265 - oldGeneratedFile, E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\Core\Src\main.c_save
+2025-11-29 18:42:07,451 [INFO] CodeEngine:289 - Generated code: E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\Core\Src\main.c
+2025-11-29 18:42:07,849 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 177mS.
+2025-11-29 18:42:07,856 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2025-11-29 18:42:07,959 [INFO] ConfigFileManager:1595 - The Die is : DIE483
+2025-11-29 18:42:07,966 [INFO] ApiDbMcu:532 - Load IP Config File for FATFS
+2025-11-29 18:42:07,970 [INFO] ApiDbMcu:532 - Load IP Config File for FREERTOS
+2025-11-29 18:42:07,972 [INFO] ApiDbMcu:532 - Load IP Config File for LIBJPEG
+2025-11-29 18:42:07,978 [INFO] ApiDbMcu:532 - Load IP Config File for LWIP
+2025-11-29 18:42:07,984 [INFO] ApiDbMcu:532 - Load IP Config File for MBEDTLS
+2025-11-29 18:42:07,990 [INFO] ApiDbMcu:532 - Load IP Config File for USB_DEVICE
+2025-11-29 18:42:07,994 [INFO] ApiDbMcu:532 - Load IP Config File for USB_HOST

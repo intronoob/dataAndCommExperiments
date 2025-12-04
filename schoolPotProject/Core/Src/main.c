@@ -24,6 +24,7 @@
 #include "stdio.h"
 #include "stdbool.h"
 #include "QOL.h"
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -33,25 +34,28 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define XVAL_CHANNEL   ADC_CHANNEL_7   // PF12 usually
-#define XPWR_CHANNEL   ADC_CHANNEL_6   // example second input
-#define YVAL_CHANNEL   ADC_CHANNEL_8   // PF12 usually
-#define YPWR_CHANNEL   ADC_CHANNEL_9   // example second input
+#define XVAL_CHANNEL   ADC_CHANNEL_7
+#define XPWR_CHANNEL   ADC_CHANNEL_6
+#define YVAL_CHANNEL   ADC_CHANNEL_8
+#define YPWR_CHANNEL   ADC_CHANNEL_9
+#define CYCLE_NUM      2000 // amt of cycles to use
+#define READS          100 //reads amt
+#define TIME           15 //speed of cycle reads
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 
 /* USER CODE END PM */
-c
+
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
 
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-long double lengthX = 6.1045;
-long double lengthY = 2.75;
+long double lengthX = 6.75;
+long double lengthY = 3.25;
 uint32_t dataOutputPause = 1000;
 /* USER CODE END PV */
 
@@ -266,11 +270,11 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 9600;
+  huart1.Init.BaudRate = 19200;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
-  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.Mode = UART_MODE_TX;
   huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
   huart1.Init.OverSampling = UART_OVERSAMPLING_16;
   huart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
@@ -305,6 +309,7 @@ static void MX_USART1_UART_Init(void)
   */
 static void MX_GPIO_Init(void)
 {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
   /* USER CODE BEGIN MX_GPIO_Init_1 */
 
   /* USER CODE END MX_GPIO_Init_1 */
@@ -314,6 +319,16 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOF_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(relayIsYAxisPin_GPIO_Port, relayIsYAxisPin_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : relayIsYAxisPin_Pin */
+  GPIO_InitStruct.Pin = relayIsYAxisPin_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(relayIsYAxisPin_GPIO_Port, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
@@ -333,15 +348,19 @@ int _write(int fd, char* ptr, int len) {
   }
   return -1;
 }
-uint16_t readXVal(void)
+uint16_t readXVal(void) //TRY HARMONIC MEAN
 {
-	uint32_t prevTick = 0;
-	uint32_t cycles = 1;
-	uint32_t curTick = 0;
-	long double xAvg = 0;
-	long double pXAvg = 0;
-	long double yAvg = 0;
-	long double pyAvg = 0;
+//	uint32_t prevTick = 0;
+//	uint32_t cycles = 1;
+//	uint32_t curTick = 0;
+//	long double xAvg = 0;
+//	long double pXAvg = 0;
+//	long double yAvg = 0;
+//	long double pYAvg = 0;
+	long double xPwr;
+	long double xVal;
+	long double yPwr;
+	long double yVal;
 	ADC_ChannelConfTypeDef sConfig = {0};
 
 	sConfig.Rank = ADC_REGULAR_RANK_1;
@@ -350,61 +369,40 @@ uint16_t readXVal(void)
 	sConfig.OffsetNumber = ADC_OFFSET_NONE;
 	sConfig.Offset = 0;
 	sConfig.OffsetSignedSaturation = DISABLE;
-	while(true) {
-		curTick = HAL_GetTick();
-		long double prevValMultl;
-		if(cycles != 1) {
-			prevValMultl = (long double)cycles / (long double)(cycles-1);
-		} else {
-			prevValMultl = 0.0;
-		}
+	sConfig.Channel = XVAL_CHANNEL;
+	HAL_ADC_ConfigChannel(&hadc1, &sConfig);
+	HAL_GPIO_WritePin(relayIsYAxisPin_GPIO_Port, relayIsYAxisPin_Pin, GPIO_PIN_SET);
+	HAL_Delay(TIME);
+	char msg[150];
+	for(int i = 0; i < READS; i++) {
 		// ----------- Read XVAL -----------
-//		sConfig.Channel = XVAL_CHANNEL;
-//		HAL_ADC_ConfigChannel(&hadc1, &sConfig);
-//		HAL_ADC_Start(&hadc1);
-//		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
-//		uint16_t xVal = HAL_ADC_GetValue(&hadc1);
-//		HAL_ADC_Stop(&hadc1);
-
-
-		// ----------- Read XPWR -----------
-//		sConfig.Channel = XPWR_CHANNEL;
-//		HAL_ADC_ConfigChannel(&hadc1, &sConfig);
-//		HAL_ADC_Start(&hadc1);
-//		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
-//		uint16_t xPwr = HAL_ADC_GetValue(&hadc1);
-//		HAL_ADC_Stop(&hadc1);
-		uint16_t xPwr = ReadADC(&hadc1, XVAL_CHANNEL, sConfig);
-		uint16_t xVal = ReadADC(&hadc1, XPWR_CHANNEL, sConfig);
-		uint16_t yPwr = ReadADC(&hadc1, YVAL_CHANNEL, sConfig);
-		uint16_t yVal = ReadADC(&hadc1, YPWR_CHANNEL, sConfig);
-
-		xAvg = xAvg*prevValMultl + ((long double)xVal / (long double)cycles);
-		pXAvg = pXAvg*prevValMultl + ((long double)xPwr / (long double)cycles);
-		yAvg = yAvg*prevValMultl + ((long double)yVal / (long double)cycles);
-		pYAvg = pYAvg*prevValMultl + ((long double)yPwr / (long double)cycles);
-
-
-
-
-		if(curTick - prevTick >= dataOutputPause) {
-			// ---------- convert to millivolts ----------
-			long double mvXVal = (long double)xAvg * 3300.0 / 65535.0;
-			long double mvXPwr = (long double)pXAvg * 3300.0 / 65535.0;
-
-			// ---------- compute distance ----------
-			long double distanceXIn = (xAvg / pXAvg) * lengthX;
-			long double distanceYIn = (yAvg / pYAvg) * lengthY;
-
-			// ---------- print output ----------
-//			printf("cycles=%lu\n", cycles);
-			printf("cycles=%lu | coords:%.2Lf,%.2Lf in\n",cycles, distanceXIn,distanceYIn);
-			xAvg = 0.0;
-			pXAvg = 0.0;
-			cycles = 1;
-			prevTick = curTick;
+		for(int i = 0; i < CYCLE_NUM; i++) {
+			xPwr += (long double)ReadADC(&hadc1, XVAL_CHANNEL, sConfig);
+			xVal += (long double)ReadADC(&hadc1, XPWR_CHANNEL, sConfig);
 		}
-		cycles++;
+		HAL_GPIO_WritePin(relayIsYAxisPin_GPIO_Port, relayIsYAxisPin_Pin, GPIO_PIN_RESET);
+		long double distanceXIn = (xVal / xPwr) * lengthX;
+		snprintf(msg, sizeof(msg),
+		         "%d,%.2Lf,%.2Lf,%.2Lf",
+		         i, distanceXIn, xVal, xPwr);
+		HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 100);
+
+		xVal = 0.0;
+		xPwr = 0.0;
+//		HAL_Delay(TIME);
+		for(int i = 0; i < CYCLE_NUM; i++) {
+			yPwr += (long double)ReadADC(&hadc1, YVAL_CHANNEL, sConfig);
+			yVal += (long double)ReadADC(&hadc1, YPWR_CHANNEL, sConfig);
+		}
+		HAL_GPIO_WritePin(relayIsYAxisPin_GPIO_Port, relayIsYAxisPin_Pin, GPIO_PIN_SET);
+		long double distanceYIn = (yVal / yPwr) * lengthY;
+		snprintf(msg, sizeof(msg),
+		         ":%.2Lf,%.2Lf,%.2Lf\n",
+		         distanceYIn, yVal, yPwr);
+		HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 100);
+
+		yVal = 0.0;
+		yPwr = 0.0;
 
 	}
     return 0;

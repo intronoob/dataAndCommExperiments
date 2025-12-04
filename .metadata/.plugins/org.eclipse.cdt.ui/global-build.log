@@ -1,4 +1,4 @@
-22:49:21 **** Incremental Build of configuration Debug for project schoolPotProject ****
+10:58:18 **** Incremental Build of configuration Debug for project schoolPotProject ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
@@ -7,33 +7,19 @@ Finished building target: schoolPotProject.elf
 arm-none-eabi-size  schoolPotProject.elf 
 arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
    text	   data	    bss	    dec	    hex	filename
-  45240	    484	   2164	  47888	   bb10	schoolPotProject.elf
+  45656	    488	   2168	  48312	   bcb8	schoolPotProject.elf
 Finished building: default.size.stdout
  
 Finished building: schoolPotProject.list
  
-23:01:06 **** Incremental Build of configuration Debug for project schoolPotProject ****
+11:09:08 **** Incremental Build of configuration Debug for project schoolPotProject ****
 make -j8 all 
 arm-none-eabi-size  schoolPotProject.elf 
    text	   data	    bss	    dec	    hex	filename
-  45240	    484	   2164	  47888	   bb10	schoolPotProject.elf
+  45656	    488	   2168	  48312	   bcb8	schoolPotProject.elf
 Finished building: default.size.stdout
  
-23:01:55 **** Incremental Build of configuration Debug for project schoolPotProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: schoolPotProject.elf
- 
-arm-none-eabi-size  schoolPotProject.elf 
-arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
-   text	   data	    bss	    dec	    hex	filename
-  45240	    484	   2164	  47888	   bb10	schoolPotProject.elf
-Finished building: default.size.stdout
- 
-Finished building: schoolPotProject.list
- 
-23:02:15 **** Incremental Build of configuration Debug for project schoolPotProject ****
+11:15:58 **** Incremental Build of configuration Debug for project schoolPotProject ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
@@ -42,223 +28,221 @@ Finished building target: schoolPotProject.elf
 arm-none-eabi-size  schoolPotProject.elf 
 arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
    text	   data	    bss	    dec	    hex	filename
-  45240	    484	   2164	  47888	   bb10	schoolPotProject.elf
+  45648	    488	   2168	  48304	   bcb0	schoolPotProject.elf
 Finished building: default.size.stdout
  
 Finished building: schoolPotProject.list
  
-23:02:51 **** Incremental Build of configuration Debug for project schoolPotProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: schoolPotProject.elf
- 
-arm-none-eabi-size  schoolPotProject.elf 
-arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
-   text	   data	    bss	    dec	    hex	filename
-  45272	    484	   2164	  47920	   bb30	schoolPotProject.elf
-Finished building: default.size.stdout
- 
-Finished building: schoolPotProject.list
- 
-23:03:21 **** Incremental Build of configuration Debug for project schoolPotProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: schoolPotProject.elf
- 
-arm-none-eabi-size  schoolPotProject.elf 
-arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
-   text	   data	    bss	    dec	    hex	filename
-  45272	    484	   2164	  47920	   bb30	schoolPotProject.elf
-Finished building: default.size.stdout
- 
-Finished building: schoolPotProject.list
- 
-23:04:18 **** Incremental Build of configuration Debug for project schoolPotProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: schoolPotProject.elf
- 
-arm-none-eabi-size  schoolPotProject.elf 
-arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
-   text	   data	    bss	    dec	    hex	filename
-  45272	    484	   2164	  47920	   bb30	schoolPotProject.elf
-Finished building: default.size.stdout
- 
-Finished building: schoolPotProject.list
- 
-23:05:12 **** Incremental Build of configuration Debug for project schoolPotProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: schoolPotProject.elf
- 
-arm-none-eabi-size  schoolPotProject.elf 
-arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
-   text	   data	    bss	    dec	    hex	filename
-  42760	    484	   2164	  45408	   b160	schoolPotProject.elf
-Finished building: default.size.stdout
- 
-Finished building: schoolPotProject.list
- 
-23:14:48 **** Incremental Build of configuration Debug for project schoolPotProject ****
+14:08:33 **** Incremental Build of configuration Debug for project schoolPotProject ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'readXVal':
-../Core/Src/main.c:389:113: warning: format '%Lf' expects argument of type 'long double', but argument 7 has type 'double' [-Wformat=]
-  389 |                         printf("cycles=%lu | xValAvg=%Lf | xPwrAvg=%Lf | mvXVal=%Lf mV | mvXPwr=%Lf mV | dist=%Lf in\r\n",
-      |                                                                                                               ~~^
-      |                                                                                                                 |
-      |                                                                                                                 long double
-      |                                                                                                               %f
-  390 |                                    cycles, xAvg, pXAvg, mvXVal, mvXPwr, 0.0);
-      |                                                                         ~~~                                      
-      |                                                                         |
-      |                                                                         double
-../Core/Src/main.c:386:37: warning: unused variable 'distanceIn' [-Wunused-variable]
-  386 |                         long double distanceIn = (xAvg / pXAvg) * length;
-      |                                     ^~~~~~~~~~
+../Core/Src/main.c:384:36: error: 'CYCLE_NUM' undeclared (first use in this function)
+  384 |                 for(int i = 0; i < CYCLE_NUM; i++) {
+      |                                    ^~~~~~~~~
+../Core/Src/main.c:384:36: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:08:52 **** Incremental Build of configuration Debug for project schoolPotProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: schoolPotProject.elf
  
 arm-none-eabi-size  schoolPotProject.elf 
 arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
    text	   data	    bss	    dec	    hex	filename
-  42768	    484	   2164	  45416	   b168	schoolPotProject.elf
+  45664	    488	   2168	  48320	   bcc0	schoolPotProject.elf
 Finished building: default.size.stdout
  
 Finished building: schoolPotProject.list
  
-23:17:00 **** Incremental Build of configuration Debug for project schoolPotProject ****
+18:02:30 **** Incremental Build of configuration Debug for project schoolPotProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: schoolPotProject.elf
+ 
+arm-none-eabi-size  schoolPotProject.elf 
+arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
+   text	   data	    bss	    dec	    hex	filename
+  45680	    488	   2168	  48336	   bcd0	schoolPotProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: schoolPotProject.list
+ 
+18:02:52 **** Incremental Build of configuration Debug for project schoolPotProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: schoolPotProject.elf
+ 
+arm-none-eabi-size  schoolPotProject.elf 
+arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
+   text	   data	    bss	    dec	    hex	filename
+  45680	    488	   2168	  48336	   bcd0	schoolPotProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: schoolPotProject.list
+ 
+18:19:24 **** Incremental Build of configuration Debug for project schoolPotProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: schoolPotProject.elf
+ 
+arm-none-eabi-size  schoolPotProject.elf 
+arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
+   text	   data	    bss	    dec	    hex	filename
+  45680	    488	   2168	  48336	   bcd0	schoolPotProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: schoolPotProject.list
+ 
+18:37:52 **** Incremental Build of configuration Debug for project schoolPotProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: schoolPotProject.elf
+ 
+arm-none-eabi-size  schoolPotProject.elf 
+arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
+   text	   data	    bss	    dec	    hex	filename
+  45648	    488	   2168	  48304	   bcb0	schoolPotProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: schoolPotProject.list
+ 
+18:38:26 **** Incremental Build of configuration Debug for project schoolPotProject ****
+make -j8 all 
+arm-none-eabi-size  schoolPotProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  45648	    488	   2168	  48304	   bcb0	schoolPotProject.elf
+Finished building: default.size.stdout
+ 
+18:39:54 **** Incremental Build of configuration Debug for project schoolPotProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: schoolPotProject.elf
+ 
+arm-none-eabi-size  schoolPotProject.elf 
+arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
+   text	   data	    bss	    dec	    hex	filename
+  45664	    488	   2168	  48320	   bcc0	schoolPotProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: schoolPotProject.list
+ 
+18:42:10 **** Incremental Build of configuration Debug for project schoolPotProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: schoolPotProject.elf
+ 
+arm-none-eabi-size  schoolPotProject.elf 
+arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
+   text	   data	    bss	    dec	    hex	filename
+  45664	    488	   2168	  48320	   bcc0	schoolPotProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: schoolPotProject.list
+ 
+18:48:28 **** Incremental Build of configuration Debug for project schoolPotProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: schoolPotProject.elf
+ 
+arm-none-eabi-size  schoolPotProject.elf 
+arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
+   text	   data	    bss	    dec	    hex	filename
+  45664	    488	   2168	  48320	   bcc0	schoolPotProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: schoolPotProject.list
+ 
+18:50:19 **** Incremental Build of configuration Debug for project schoolPotProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: schoolPotProject.elf
+ 
+arm-none-eabi-size  schoolPotProject.elf 
+arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
+   text	   data	    bss	    dec	    hex	filename
+  45712	    488	   2168	  48368	   bcf0	schoolPotProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: schoolPotProject.list
+ 
+18:53:39 **** Incremental Build of configuration Debug for project schoolPotProject ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: schoolPotProject.elf
+ 
+arm-none-eabi-size  schoolPotProject.elf 
+arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
+   text	   data	    bss	    dec	    hex	filename
+  45712	    488	   2168	  48368	   bcf0	schoolPotProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: schoolPotProject.list
+ 
+18:55:49 **** Incremental Build of configuration Debug for project schoolPotProject ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'readXVal':
-../Core/Src/main.c:389:32: warning: too many arguments for format [-Wformat-extra-args]
-  389 |                         printf("cycles=%lu", cycles, prevTick - curTick);
-      |                                ^~~~~~~~~~~~
-../Core/Src/main.c:386:37: warning: unused variable 'distanceIn' [-Wunused-variable]
-  386 |                         long double distanceIn = (xAvg / pXAvg) * length;
-      |                                     ^~~~~~~~~~
-../Core/Src/main.c:383:37: warning: unused variable 'mvXPwr' [-Wunused-variable]
-  383 |                         long double mvXPwr = (long double)pXAvg * 3300.0 / 65535.0;
-      |                                     ^~~~~~
-../Core/Src/main.c:382:37: warning: unused variable 'mvXVal' [-Wunused-variable]
-  382 |                         long double mvXVal = (long double)xAvg * 3300.0 / 65535.0;
-      |                                     ^~~~~~
+../Core/Src/main.c:387:59: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  387 |                 HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 100);
+      |                                                           ^~~~~~
+../Core/Src/main.c:27:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   26 | #include "QOL.h"
+  +++ |+#include <string.h>
+   27 | /* USER CODE END Includes */
+../Core/Src/main.c:387:59: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
+  387 |                 HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 100);
+      |                                                           ^~~~~~
+../Core/Src/main.c:387:59: note: include '<string.h>' or provide a declaration of 'strlen'
 arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: schoolPotProject.elf
  
 arm-none-eabi-size  schoolPotProject.elf 
 arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
    text	   data	    bss	    dec	    hex	filename
-  42656	    484	   2164	  45304	   b0f8	schoolPotProject.elf
+  46740	    488	   2168	  49396	   c0f4	schoolPotProject.elf
 Finished building: default.size.stdout
  
 Finished building: schoolPotProject.list
  
-23:17:36 **** Incremental Build of configuration Debug for project schoolPotProject ****
+18:57:13 **** Incremental Build of configuration Debug for project schoolPotProject ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'readXVal':
-../Core/Src/main.c:386:37: warning: unused variable 'distanceIn' [-Wunused-variable]
-  386 |                         long double distanceIn = (xAvg / pXAvg) * length;
-      |                                     ^~~~~~~~~~
-../Core/Src/main.c:383:37: warning: unused variable 'mvXPwr' [-Wunused-variable]
-  383 |                         long double mvXPwr = (long double)pXAvg * 3300.0 / 65535.0;
-      |                                     ^~~~~~
-../Core/Src/main.c:382:37: warning: unused variable 'mvXVal' [-Wunused-variable]
-  382 |                         long double mvXVal = (long double)xAvg * 3300.0 / 65535.0;
-      |                                     ^~~~~~
+../Core/Src/main.c:387:59: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  387 |                 HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 100);
+      |                                                           ^~~~~~
+../Core/Src/main.c:27:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   26 | #include "QOL.h"
+  +++ |+#include <string.h>
+   27 | /* USER CODE END Includes */
+../Core/Src/main.c:387:59: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
+  387 |                 HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 100);
+      |                                                           ^~~~~~
+../Core/Src/main.c:387:59: note: include '<string.h>' or provide a declaration of 'strlen'
 arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: schoolPotProject.elf
  
 arm-none-eabi-size  schoolPotProject.elf 
 arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
    text	   data	    bss	    dec	    hex	filename
-  42664	    484	   2164	  45312	   b100	schoolPotProject.elf
+  46692	    488	   2168	  49348	   c0c4	schoolPotProject.elf
 Finished building: default.size.stdout
  
 Finished building: schoolPotProject.list
  
-23:18:12 **** Incremental Build of configuration Debug for project schoolPotProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'readXVal':
-../Core/Src/main.c:386:37: warning: unused variable 'distanceIn' [-Wunused-variable]
-  386 |                         long double distanceIn = (xAvg / pXAvg) * length;
-      |                                     ^~~~~~~~~~
-../Core/Src/main.c:383:37: warning: unused variable 'mvXPwr' [-Wunused-variable]
-  383 |                         long double mvXPwr = (long double)pXAvg * 3300.0 / 65535.0;
-      |                                     ^~~~~~
-../Core/Src/main.c:382:37: warning: unused variable 'mvXVal' [-Wunused-variable]
-  382 |                         long double mvXVal = (long double)xAvg * 3300.0 / 65535.0;
-      |                                     ^~~~~~
-arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: schoolPotProject.elf
- 
-arm-none-eabi-size  schoolPotProject.elf 
-arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
-   text	   data	    bss	    dec	    hex	filename
-  42648	    484	   2164	  45296	   b0f0	schoolPotProject.elf
-Finished building: default.size.stdout
- 
-Finished building: schoolPotProject.list
- 
-23:19:14 **** Incremental Build of configuration Debug for project schoolPotProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'readXVal':
-../Core/Src/main.c:386:37: warning: unused variable 'distanceIn' [-Wunused-variable]
-  386 |                         long double distanceIn = (xAvg / pXAvg) * length;
-      |                                     ^~~~~~~~~~
-../Core/Src/main.c:383:37: warning: unused variable 'mvXPwr' [-Wunused-variable]
-  383 |                         long double mvXPwr = (long double)pXAvg * 3300.0 / 65535.0;
-      |                                     ^~~~~~
-../Core/Src/main.c:382:37: warning: unused variable 'mvXVal' [-Wunused-variable]
-  382 |                         long double mvXVal = (long double)xAvg * 3300.0 / 65535.0;
-      |                                     ^~~~~~
-arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: schoolPotProject.elf
- 
-arm-none-eabi-size  schoolPotProject.elf 
-arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
-   text	   data	    bss	    dec	    hex	filename
-  42648	    484	   2164	  45296	   b0f0	schoolPotProject.elf
-Finished building: default.size.stdout
- 
-Finished building: schoolPotProject.list
- 
-23:20:31 **** Incremental Build of configuration Debug for project schoolPotProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'readXVal':
-../Core/Src/main.c:389:113: warning: format '%Lf' expects argument of type 'long double', but argument 7 has type 'double' [-Wformat=]
-  389 |                         printf("cycles=%lu | xValAvg=%Lf | xPwrAvg=%Lf | mvXVal=%Lf mV | mvXPwr=%Lf mV | dist=%Lf in\r\n",
-      |                                                                                                               ~~^
-      |                                                                                                                 |
-      |                                                                                                                 long double
-      |                                                                                                               %f
-  390 |                                    cycles, xAvg, pXAvg, mvXVal, mvXPwr, 0.0);
-      |                                                                         ~~~                                      
-      |                                                                         |
-      |                                                                         double
-../Core/Src/main.c:385:37: warning: unused variable 'distanceIn' [-Wunused-variable]
-  385 |                         long double distanceIn = (xAvg / pXAvg) * length;
-      |                                     ^~~~~~~~~~
-arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: schoolPotProject.elf
- 
-arm-none-eabi-size  schoolPotProject.elf 
-arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
-   text	   data	    bss	    dec	    hex	filename
-  45280	    484	   2164	  47928	   bb38	schoolPotProject.elf
-Finished building: default.size.stdout
- 
-Finished building: schoolPotProject.list
- 
-23:20:59 **** Incremental Build of configuration Debug for project schoolPotProject ****
+12:55:10 **** Incremental Build of configuration Debug for project schoolPotProject ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
@@ -267,12 +251,12 @@ Finished building target: schoolPotProject.elf
 arm-none-eabi-size  schoolPotProject.elf 
 arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
    text	   data	    bss	    dec	    hex	filename
-  45272	    484	   2164	  47920	   bb30	schoolPotProject.elf
+  46692	    488	   2168	  49348	   c0c4	schoolPotProject.elf
 Finished building: default.size.stdout
  
 Finished building: schoolPotProject.list
  
-23:22:57 **** Incremental Build of configuration Debug for project schoolPotProject ****
+12:57:32 **** Incremental Build of configuration Debug for project schoolPotProject ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
@@ -281,12 +265,12 @@ Finished building target: schoolPotProject.elf
 arm-none-eabi-size  schoolPotProject.elf 
 arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
    text	   data	    bss	    dec	    hex	filename
-  45272	    484	   2164	  47920	   bb30	schoolPotProject.elf
+  46692	    488	   2168	  49348	   c0c4	schoolPotProject.elf
 Finished building: default.size.stdout
  
 Finished building: schoolPotProject.list
  
-23:23:30 **** Incremental Build of configuration Debug for project schoolPotProject ****
+12:58:26 **** Incremental Build of configuration Debug for project schoolPotProject ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
@@ -295,12 +279,33 @@ Finished building target: schoolPotProject.elf
 arm-none-eabi-size  schoolPotProject.elf 
 arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
    text	   data	    bss	    dec	    hex	filename
-  45272	    484	   2164	  47920	   bb30	schoolPotProject.elf
+  46692	    488	   2168	  49348	   c0c4	schoolPotProject.elf
 Finished building: default.size.stdout
  
 Finished building: schoolPotProject.list
  
-23:26:14 **** Incremental Build of configuration Debug for project schoolPotProject ****
+12:59:00 **** Incremental Build of configuration Debug for project schoolPotProject ****
+make -j8 all 
+arm-none-eabi-size  schoolPotProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46692	    488	   2168	  49348	   c0c4	schoolPotProject.elf
+Finished building: default.size.stdout
+ 
+13:00:33 **** Incremental Build of configuration Debug for project schoolPotProject ****
+make -j8 all 
+arm-none-eabi-size  schoolPotProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46692	    488	   2168	  49348	   c0c4	schoolPotProject.elf
+Finished building: default.size.stdout
+ 
+13:01:04 **** Incremental Build of configuration Debug for project schoolPotProject ****
+make -j8 all 
+arm-none-eabi-size  schoolPotProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46692	    488	   2168	  49348	   c0c4	schoolPotProject.elf
+Finished building: default.size.stdout
+ 
+13:02:10 **** Incremental Build of configuration Debug for project schoolPotProject ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
@@ -309,145 +314,7 @@ Finished building target: schoolPotProject.elf
 arm-none-eabi-size  schoolPotProject.elf 
 arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
    text	   data	    bss	    dec	    hex	filename
-  45272	    484	   2164	  47920	   bb30	schoolPotProject.elf
-Finished building: default.size.stdout
- 
-Finished building: schoolPotProject.list
- 
-23:29:59 **** Incremental Build of configuration Debug for project schoolPotProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: schoolPotProject.elf
- 
-arm-none-eabi-size  schoolPotProject.elf 
-arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
-   text	   data	    bss	    dec	    hex	filename
-  45272	    484	   2164	  47920	   bb30	schoolPotProject.elf
-Finished building: default.size.stdout
- 
-Finished building: schoolPotProject.list
- 
-23:30:48 **** Incremental Build of configuration Debug for project schoolPotProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: schoolPotProject.elf
- 
-arm-none-eabi-size  schoolPotProject.elf 
-arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
-   text	   data	    bss	    dec	    hex	filename
-  45272	    484	   2164	  47920	   bb30	schoolPotProject.elf
-Finished building: default.size.stdout
- 
-Finished building: schoolPotProject.list
- 
-23:36:44 **** Incremental Build of configuration Debug for project schoolPotProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: schoolPotProject.elf
- 
-arm-none-eabi-size  schoolPotProject.elf 
-arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
-   text	   data	    bss	    dec	    hex	filename
-  45256	    484	   2164	  47904	   bb20	schoolPotProject.elf
-Finished building: default.size.stdout
- 
-Finished building: schoolPotProject.list
- 
-23:43:01 **** Incremental Build of configuration Debug for project schoolPotProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: schoolPotProject.elf
- 
-arm-none-eabi-size  schoolPotProject.elf 
-arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
-   text	   data	    bss	    dec	    hex	filename
-  45264	    484	   2164	  47912	   bb28	schoolPotProject.elf
-Finished building: default.size.stdout
- 
-Finished building: schoolPotProject.list
- 
-23:43:55 **** Incremental Build of configuration Debug for project schoolPotProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'readXVal':
-../Core/Src/main.c:387:58: warning: format '%Lf' expects argument of type 'long double', but argument 3 has type 'int' [-Wformat=]
-  387 |                         printf("cycles=%lu | xValAvg=%.2Lf | xPwrAvg=%.2Lf | mvXVal=%.2Lf mV | mvXPwr=%.2Lf mV | dist=%.2Lf in\n",
-      |                                                      ~~~~^
-      |                                                          |
-      |                                                          long double
-      |                                                      %.2d
-  388 |                                    cycles, 0, 0, 0, 0, distanceIn);
-      |                                            ~              
-      |                                            |
-      |                                            int
-../Core/Src/main.c:387:74: warning: format '%Lf' expects argument of type 'long double', but argument 4 has type 'int' [-Wformat=]
-  387 |                         printf("cycles=%lu | xValAvg=%.2Lf | xPwrAvg=%.2Lf | mvXVal=%.2Lf mV | mvXPwr=%.2Lf mV | dist=%.2Lf in\n",
-      |                                                                      ~~~~^
-      |                                                                          |
-      |                                                                          long double
-      |                                                                      %.2d
-  388 |                                    cycles, 0, 0, 0, 0, distanceIn);
-      |                                               ~                           
-      |                                               |
-      |                                               int
-../Core/Src/main.c:387:89: warning: format '%Lf' expects argument of type 'long double', but argument 5 has type 'int' [-Wformat=]
-  387 |                         printf("cycles=%lu | xValAvg=%.2Lf | xPwrAvg=%.2Lf | mvXVal=%.2Lf mV | mvXPwr=%.2Lf mV | dist=%.2Lf in\n",
-      |                                                                                     ~~~~^
-      |                                                                                         |
-      |                                                                                         long double
-      |                                                                                     %.2d
-  388 |                                    cycles, 0, 0, 0, 0, distanceIn);
-      |                                                  ~                                       
-      |                                                  |
-      |                                                  int
-../Core/Src/main.c:387:107: warning: format '%Lf' expects argument of type 'long double', but argument 6 has type 'int' [-Wformat=]
-  387 |                         printf("cycles=%lu | xValAvg=%.2Lf | xPwrAvg=%.2Lf | mvXVal=%.2Lf mV | mvXPwr=%.2Lf mV | dist=%.2Lf in\n",
-      |                                                                                                       ~~~~^
-      |                                                                                                           |
-      |                                                                                                           long double
-      |                                                                                                       %.2d
-  388 |                                    cycles, 0, 0, 0, 0, distanceIn);
-      |                                                     ~                                                      
-      |                                                     |
-      |                                                     int
-../Core/Src/main.c:380:37: warning: unused variable 'mvXPwr' [-Wunused-variable]
-  380 |                         long double mvXPwr = (long double)pXAvg * 3300.0 / 65535.0;
-      |                                     ^~~~~~
-../Core/Src/main.c:379:37: warning: unused variable 'mvXVal' [-Wunused-variable]
-  379 |                         long double mvXVal = (long double)xAvg * 3300.0 / 65535.0;
-      |                                     ^~~~~~
-arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: schoolPotProject.elf
- 
-arm-none-eabi-size  schoolPotProject.elf 
-arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
-   text	   data	    bss	    dec	    hex	filename
-  45248	    484	   2164	  47896	   bb18	schoolPotProject.elf
-Finished building: default.size.stdout
- 
-Finished building: schoolPotProject.list
- 
-23:44:33 **** Incremental Build of configuration Debug for project schoolPotProject ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/STM32STUFF/STM32 custom libraries/QOL stuff/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'readXVal':
-../Core/Src/main.c:380:37: warning: unused variable 'mvXPwr' [-Wunused-variable]
-  380 |                         long double mvXPwr = (long double)pXAvg * 3300.0 / 65535.0;
-      |                                     ^~~~~~
-../Core/Src/main.c:379:37: warning: unused variable 'mvXVal' [-Wunused-variable]
-  379 |                         long double mvXVal = (long double)xAvg * 3300.0 / 65535.0;
-      |                                     ^~~~~~
-arm-none-eabi-gcc -o "schoolPotProject.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\STM32STUFF\dataAndCommExperiments\schoolPotProject\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="schoolPotProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: schoolPotProject.elf
- 
-arm-none-eabi-size  schoolPotProject.elf 
-arm-none-eabi-objdump -h -S schoolPotProject.elf  > "schoolPotProject.list"
-   text	   data	    bss	    dec	    hex	filename
-  45168	    484	   2164	  47816	   bac8	schoolPotProject.elf
+  46692	    488	   2168	  49348	   c0c4	schoolPotProject.elf
 Finished building: default.size.stdout
  
 Finished building: schoolPotProject.list

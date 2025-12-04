@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="&#x0D;&#x0A;&#x0D;&#x0A;"/>
+		<list key="findhistory">
+			<item value="&#x0D;&#x0A;&#x0D;&#x0A;"/>
+			<item value="&#x0D;&#x0A;&#x09;&#x09;    &quot;XY coords: %.2Lf, %.2Lf in | &quot;&#x0D;&#x0A;&#x09;&#x09;    &quot;xVal=%.2Lf xPwr=%.2Lf yVal=%.2Lf yPwr=%.2Lf\n&quot;,&#x0D;&#x0A;&#x09;&#x09;    distanceXIn, distanceYIn,&#x0D;&#x0A;&#x09;&#x09;    xVal, xPwr, yVal, yPwr&#x0D;&#x0A;&#x09;&#x09;);"/>
+			<item value="ck = HAL_GetTick();"/>
+			<item value="(long double)CYCLE_NUM);"/>
+			<item value=""/>
+		</list>
+	</section>
+</section>
